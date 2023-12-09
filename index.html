@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password generator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <div class="main">
-        <div class="left">
-            <div class="info">
-                <div class="child">
-                    <!-- <label>Enter length of password</label> -->
-                    <input type="number" name="" id="passwordlength" placeholder="Enter length of password">
+        <h1>Password Generator</h1>
+        <div class="box">
+            <span id="pass-box">Testing</span>
+            <div class="row">
+                <div class="left">
+                    Password Length
                 </div>
-                <div class="child">
-                    <label>Contains uppercase</label>
-                    <input type="checkbox" name="" id="uppercase" checked>
+                <div class="right">
+                    <input type="number" name="" id="total-char" max="30" min="2" value="10" />
                 </div>
-                <div class="child">
-                    <label>Contains lowercase</label>
-                    <input type="checkbox" name="" id="lowercase" checked>
-                </div>
-                <div class="child">
-                    <label>Contains symbols</label>
-                    <input type="checkbox" name="" id="symbols" checked>
-                </div>
-                <div class="child">
-                    <label>Contains numbers</label>
-                    <input type="checkbox" name="" id="numbers" checked>
-                </div>
-                    <button class="btn">Generate password</button>
             </div>
-        </div>
-        <div class="right">
-            <div class="ans">
-                <input type="text" name="" id="password" placeholder="Generated Password">
-                <button class="btn">Copy Password</button>
+            <div class="row">
+                <label for="upper-case">
+                    <div class="left">
+                       Contains Uppercase
+                    </div>
+                </label>
+                <div class="right">
+                    <input type="checkbox" name="" id="upper-case" checked/>
+                </div>
+            </div>
+            <div class="row">
+                <label for="lower-case">
+                    <div class="left">
+                      Contains Lowercase
+                    </div>
+                </label>
+                <div class="right">
+                    <input type="checkbox" name="" id="lower-case" checked/>
+                </div>
+            </div>
+            <div class="row">
+                <label for="numbers">
+                    <div class="left">
+                    Contains Numbers
+                    </div>
+                </label>
+                <div class="right">
+                    <input type="checkbox" name="" id="numbers" checked/>
+                </div>
+            </div>
+            <div class="row">
+                <label for="symbols">
+                    <div class="left">
+                    Contains Symbols
+                    </div>
+                </label>
+                <div class="right">
+                    <input type="checkbox" name="" id="symbols" checked/>
+                </div>
+            </div>
+            <div class="row">
+                <button id="btn">
+                    Generate
+                </button>
             </div>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
