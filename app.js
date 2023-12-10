@@ -33,8 +33,21 @@ const generatePassword = (password = "") => {
     if (password.length < totalChar.value) {
         return generatePassword(password)
     }
-
-    passBox.innerText = truncateString(password, totalChar.value);
+    else if(password.length>=totalChar.value)
+    {
+        passBox.innerText = password.substring(0, totalChar.value);
+        let s =  passBox.innerText
+        let shuffle = (s) => {
+            let arr = s.split(''), arr_len = arr.length;
+            while (arr_len) {
+              let rnd = Math.floor(Math.random() * arr_len--);
+              [arr[arr_len], arr[rnd]] = [arr[rnd] , arr[arr_len]];
+            }
+            let str = arr.join('');
+                return str;
+          }
+          passBox.innerText = shuffle(s);
+    }
 }
 
 
